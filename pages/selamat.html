@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina's Birthday</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <style>
+        .message-card {
+            transition: all 0.3s ease;
+        }
+
+        .message-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fff 100%);
+        }
+
+        .reply-bubble {
+            position: relative;
+        }
+
+        .reply-bubble::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 15px;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent #fdf2f8 transparent transparent;
+        }
+
+        @media (max-width: 768px) {
+            .message-card:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Iframe untuk Pemutar Musik -->
+    <iframe src="/pages/musicPlayer.html" id="musicFrame" style="display: none;"></iframe>
+
+    <section class="py-4 bg-gradient-to-b from-[#f1ece3] via-[#f0ede9] to-white min-h-screen">
+        <!-- Top Spacing for Mobile -->
+        <div class="h-6 mt-8"></div>
+
+        <div class="container mx-auto px-4 sm:px-6">
+            <!-- Header Section with Better Mobile Spacing -->
+            <div class="text-center mb-8 sm:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#756763] mb-3">
+                    Ucapan spesial untuk Devina
+                </h2>
+                <div class="w-16 sm:w-24 h-1 bg-[#756763] mx-auto rounded-full mb-6"></div>
+            </div>
+
+            <!-- Messages Grid with Improved Mobile Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-4">
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    P
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    Panda
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    25-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                Hai Devinaa, selamat ulang tahun yaaa.
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Terima kasih yaaa.
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            25-02-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    t
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    temannya niko
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    26-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                HAPPY EIGHTEEN BIRTDAYYY DEVINAAA, semua tentang devina selalu dirayakan, semoga selalu dipertemukan dgn orang baik yg selalu ngerasa beruntung dgn keberadaanmu, dan selamat menunaikan ibadah puasa hihihi
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Sapa nii heheh, terimaksiihh banyakk😇😇
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    t
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    temannya niko
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    27-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                Selamat ulang tahun ke-18, devinaa! Wah, kamu sudah dewasa sekarang! Semoga semua impianmu tercapai dan kamu selalu bahagia.Semoga kamu selalu dikelilingi orang-orang yang sayang sama kamu.Jangan takut bermimpi besar dan kejar cita-citamu. Aku yakin kamu bisa meraih semua yang kamu inginkan. Semoga kamu selalu diberikan kebahagiaan, kesehatan, dan kesuksesan. Semoga di hari spesial ini kamu mendapatkan semua yang kamu inginkan.
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Aminnn yaallah, makasiii banyakkk temannya nikoo😇😇
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    t
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    temannya niko
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    27-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                Selamat ulang tahun yang ke-18! Semoga kamu semakin sukses, cantik, dan bahagia.Semoga tahun ini menjadi tahun yang penuh dengan kebahagiaan, kesuksesan, dan cinta. Kamu pantas mendapatkan yang terbaik!,Semoga kamu selalu menjadi dirimu sendiri dan tidak pernah berubah. Kamu adalah orang yang luar biasa!,Semoga kamu selalu sehat, bahagia, dan sukses dalam segala hal yang kamu lakukan.
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Aminn yaallah, terimakasiiii banyakk yaaa! 😇😇
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    T
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    Teman terdekatmuu🤍
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    27-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                Selamat bertambah usia yaa cintahh🤍✨Semoga hal-hal baikk selalu menyertai muu. Semoga semua doa dan harapan muu bisa teecapaii, sehat selaluu yaa😊terimakasih karena sudah menjadi teman terbaikk selama 3 tahun inii, aku senang dan bersyukur bisa kenal kamuu. nanti klo udah lulus jgn lupain aku yaa🤗🤍Sekali lagii selamat ulang tahunn🎂🎁🎉
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Maaciww banyakk bubb, iki pasti vinnaa😭🤍
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    v
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    vinolia barudax cakarayAm tercwantikkk
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    27-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                DEVINAA HAPPY BIRTHDAYY PRETTYYY🥺🥺terimakasi sudah mau bertahan diusia ke 18 iniiiterimakasi juga udah mau setia dan bertahan sama 4ever hehehe, hbs ini lulus, mohon bgt jgn lost contact sm aku dan 4ever. kmu nek pengen curhat curhat juga bisa ke kitaaa dev, jgn dipendem sndiri☹harapanku semua yg kmu inginkan bakal tewujud aamiinn, sukses selalu yaa dev. tetep jd devina sg tak kenal yaw jangan berubah, maaf se kata kata e pke b.indo jd sedikit aneh, tp aku pengeeen pake b.indo biar soswit. sempga ditahun ini jadi taun paling banyaknya buat kmu ceriaa, bahagiaa, sukses dan selalu dikelilingi hal baik.oke sekian pidato dari aku, wassalamualaikum wr.wb💋
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Aminnn yaallah maaciww banyakkk pipinnn😭💘
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    I
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    Indaaahhhpcrnyawhy
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    27-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                Selamatt ulang tahunnnn depinaaaaa ke 18th🥳🥳🥳Semogaa tambah pinterrrr, cantikk, tercapai cita" nyaa, bahagiaaa samaa orang tuaaa, semogaa yang disemogakan tersemogakann, jangan lupakan akuuu & 4everrr yahhhhh🫂WISH YOU ALL THE BESTTTTTT🤍💞
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Aminnn maaciww banyakk indahhh🥺🤍
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-card bg-[#ebd5c7] rounded-xl shadow-sm border border-white overflow-hidden">
+                    <!-- Card Header with Better Mobile Padding -->
+                    <div class="p-4 sm:p-6">
+                        <!-- Sender Info with Improved Layout -->
+                        <div class="flex items-center mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
+                                <span class="text-[#756763] font-bold text-lg">
+                                    ?
+                                </span>
+                            </div>
+                            <div class="ml-3 flex-1">
+                                <p class="font-semibold text-[#756763] text-lg sm:text-base">
+                                    🥳
+                                </p>
+                                <p class="text-xs text-[#756763]">
+                                    27-02-2025
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Message Content with Better Spacing -->
+                        <div class="space-y-4 p-4">
+                            <div class="text-[#756763] text-lg sm:text-lg leading-relaxed">
+                                Sekaliii lagiiiii happy birthday devinaaaaaa cantikkkkk😍😍
+                            </div>
+                            <div class="mt-6 relative">
+                                <!-- Vertical Line Connector -->
+                                <div class="absolute left-5 -top-4 w-0.5 h-4 bg-[#ebd5c7]"></div>
+
+                                <div class="ml-8 reply-bubble">
+                                    <div
+                                        class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-5 rounded-2xl shadow-sm">
+                                        <!-- Reply Icon - Made Larger -->
+                                        <div class="flex flex-col gap-4 mb-3 p-4">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-5 w-5 text-[#756763] mr-2" viewBox="0 0 24 24"
+                                                fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+                                                <polyline points="15 10 20 15 15 20"></polyline>
+                                                <path d="M4 4v7a4 4 0 0 0 4 4h12"></path>
+                                            </svg>
+                                            <span class="text-sm text-[#756763] font-bold">Balasan</span>
+
+                                            <!-- Reply Content -->
+                                            <p class="text-[#756763] text-lg sm:text-lg leading-relaxed mb-3">
+                                                Ga bisa bilang apa apaa inii niatt bgtt sumpaa, makasiiii banyak semuanyaa, terimakasiii nikoo😇🥺
+                                            </p>
+
+                                            <!-- Reply Footer with Larger Avatar -->
+                                            <div class="flex items-center justify-between">
+                                                <div class="flex items-center">
+                                                    <div
+                                                        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center border-2 border-white">
+                                                        <span class="text-[#756763] text-base font-semibold">D</span>
+                                                    </div>
+                                                    <div class="ml-3">
+                                                        <p class="text-sm font-medium text-[#756763]">Devina</p>
+                                                        <p class="text-xs text-[#756763]">
+                                                            01-03-2025
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-6 mt-10 mb-8">
+                <a href="/pages/pesan.html"
+                    class="hover-button bg-gradient-to-l from-[#756763] to-[#86746f] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg text-base sm:text-lg font-semibold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Kembali
+                </a>
+                <a href="/pages/confess.html"
+                    class="hover-button bg-gradient-to-r from-[#756763] to-[#86746f] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg text-base sm:text-lg font-semibold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                    Lanjutkan
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+    </section>
+
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Disable hover effects on touch devices
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.message-card').forEach(card => {
+                card.style.transform = 'none';
+            });
+        }
+    </script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

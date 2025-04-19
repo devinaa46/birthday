@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina's Birthday</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <!-- @yield('styles') -->
+</head>
+
+<body>
+    <!-- Iframe untuk Pemutar Musik -->
+    <iframe src="/pages/musicPlayer.html" id="musicFrame" style="display: none;"></iframe>
+
+    <section class="py-12 md:py-20 bg-gradient-to-b from-[#f1ece3] via-[#f0ede9] to-white" data-aos="fade-up">
+        <div class="container mx-auto px-4">
+            <!-- Judul -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#756763] mb-8 md:mb-12" data-aos="fade-up">Message</h2>
+
+            <!-- Konten -->
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Gambar -->
+                <div class="w-full md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="/images/p5.PNG" alt="Birthday Panda"
+                        class="w-full max-w-md mx-auto rounded-lg shadow-2xl transform transition-transform duration-500 hover:scale-105"
+                        data-speed="0.3">
+                </div>
+
+                <!-- Pesan -->
+                <div class="w-full md:w-1/2 md:pl-8 px-4" data-aos="fade-left">
+                    <p class="text-[#756763] font-medium text-md md:text-lg leading-relaxed">
+                        "Panda" mungkin ga punya banyak pesan yang ingin disampaikan, karena tentangmu masih banyak yang
+                        belum "Panda" tau. Yang pasti kamu harus tetap menjadi orang baik dan jauh lebih baik yaa, tetap
+                        jadi dirimu sendiri. Suatu saat nanti "Panda" ingin lebih mengenalmu dan melihat jauh lebih banyak hal
+                        tentangmu. Semoga waktu dan kesempatan itu memang ada yaa. Mungkin udah itu aja, silahkan lanjut.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tombol Navigasi -->
+            <div class="flex flex-row justify-center gap-4 md:gap-6 mt-10 md:mt-10">
+                <a href="/pages/gallery.html"
+                    class="hover-button bg-gradient-to-l from-[#756763] to-[#86746f] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg text-base sm:text-lg font-semibold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Kembali
+                </a>
+                <a href="/pages/selamat.html"
+                    class="hover-button bg-gradient-to-r from-[#756763] to-[#86746f] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg text-base sm:text-lg font-semibold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                    Lanjutkan
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- @yield('script') -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

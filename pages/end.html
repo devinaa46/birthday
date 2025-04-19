@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina's Birthday</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <!-- @yield('styles') -->
+</head>
+
+<body>
+    <!-- Iframe untuk Pemutar Musik -->
+    <iframe src="/pages/musicPlayer.html" id="musicFrame" style="display: none;"></iframe>
+
+    <section class="min-h-screen bg-gradient-to-br from-[#f1ece3] to-[#f0ede9] flex items-center justify-center p-6">
+        <div class="bg-[#ebd5c7] backdrop-blur-lg rounded-3xl shadow-2xl max-w-2xl w-full p-8 sm:p-12 relative overflow-hidden">
+
+            <!-- Judul -->
+            <h2 class="text-4xl font-bold text-center text-[#756763] mb-8" data-aos="fade-up">
+                Sekian
+            </h2>
+
+            <!-- Pesan Penutup -->
+            <div class="bg-gradient-to-br from-[#f2eade] to-[#ece7df] p-8 rounded-2xl border-l-8 border-[#756763] shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="space-y-6">
+                    <p class="text-[#756763] text-base leading-relaxed">
+                        Terima kasih sudah meluangkan waktu untuk membaca pesan ini.
+                    </p>
+                    <p class="text-[#756763] text-base leading-relaxed">
+                        Apapun yang terjadi, aku selalu berharap yang terbaik untukmu. Semoga kamu selalu bahagia, sehat, dan sukses dalam mengejar mimpimu.
+                    </p>
+                    <p class="text-[#756763] text-base leading-relaxed">
+                        Sampai jumpa di lain waktu.
+                    </p>
+                    <p class="text-[#756763] text-base leading-relaxed">
+                        Once Again Happy Birthday, Devina Magareta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tombol Kembali -->
+            <div class="text-center mt-8">
+                <a href="/index.html" class="bg-gradient-to-r from-[#756763] to-[#86746f] text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-600 transition-transform transform hover:scale-105">
+                    🏠 Kembali ke Beranda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Inisialisasi AOS
+        AOS.init({
+            duration: 1000, // Durasi animasi
+            once: true, // Animasi hanya sekali
+        });
+
+        // Animasi untuk ikon hati
+        const heartIcons = document.querySelectorAll('.animate-float');
+        heartIcons.forEach((icon, index) => {
+            icon.style.animationDelay = `${index * 0.5}s`;
+        });
+    </script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

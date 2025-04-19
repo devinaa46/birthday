@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devina's Birthday</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <style>
+        /* Animasi bounce */
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        /* Gradient background */
+        .birthday-gradient {
+            background: linear-gradient(180deg, #fffafd 0%, #f5f3ff 100%);
+        }
+
+        /* Transisi untuk gambar */
+        .gallery-card {
+            transition: all 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Overlay gradien untuk text */
+        .image-overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-card:hover .image-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Iframe untuk Pemutar Musik -->
+    <iframe src="/pages/musicPlayer.html" id="musicFrame" style="display: none;"></iframe>
+
+    <div class="min-h-screen bg-gradient-to-b from-[#f1ece3] to-[#f0ede9]">
+        <div class="py-8 px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#756763] mb-2">
+                Devina's Gallery
+            </h1>
+            <p class="text-lg font-semibold text-[#756763] max-w-md mx-auto">
+                Selanjutnya kita akan melihat apapun itu asal tentang Devina.
+            </p>
+        </div>
+
+        <div class="container mx-auto px-4 pb-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/9.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">18-01-24 - Awal awal nih</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/6.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">11-03-24 - Ini sih story wa hehe</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/1.PNG" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">29-06-24 - Masa masa pkl check</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/12.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">05-07-24 - Masa Akhir PKL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/10.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">Devina in Karnaval Skaneda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/16.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">23-10-24 - Hari santri terakhir di masa SMK</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/26.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">07-11-24 - ini ada apa ya? lupa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/a5.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">19-12-24 - Devina X Xterious</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/a4.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">13-01-25 - Udah foto ijazah aja nih</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/a3.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">23-01-25 - Ini terlalu lucu untuk dilewatkan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/a1.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">18-02-25 - Hari pertama UKK nih</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-card relative overflow-hidden rounded-xl shadow-md bg-white">
+                    <div class="aspect-[3/4] relative overflow-hidden">
+                        <img src="/images/a6.jpg" alt="Birthday Memory"
+                            class="w-full h-full object-cover object-center transition-transform duration-500">
+                        <div class="image-overlay absolute inset-0">
+                           <div class="absolute bottom-0 left-0 right-0 p-4 text-[#f2eade]">
+                                <p class="text-sm font-medium">20-02-25 - Hari terakhir UKK dan Selesaiii</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center gap-6 mt-10">
+                <a href="/pages/ucapan.html"
+                    class="hover-button bg-gradient-to-l from-[#756763] to-[#86746f] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg text-base sm:text-lg font-semibold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                    Kembali
+                </a>
+                <a href="/pages/pesan.html"
+                    class="hover-button bg-gradient-to-r from-[#756763] to-[#86746f] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg text-base sm:text-lg font-semibold flex items-center justify-center gap-2 transform transition-transform duration-300 hover:scale-105">
+                    Lanjutkan
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- @yield('script') -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
