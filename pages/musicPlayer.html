@@ -7,7 +7,7 @@
 </head>
 <body>
     <audio id="background-music" controls loop>
-        <source src="lagu/monokrom.mp3" type="audio/mp3">
+        <source src="../lagu/monokrom.mp3" type="audio/mp3">
         Your browser does not support the audio tag.
     </audio>
 
@@ -15,7 +15,7 @@
         const audio = document.getElementById('background-music');
 
         // Ambil lagu terakhir yang diputar
-        const lastSong = localStorage.getItem('currentSong') || "lagu/monokrom.mp3";
+        const lastSong = localStorage.getItem('currentSong') || "../lagu/monokrom.mp3";
         const lastTime = localStorage.getItem('currentTime') || 0;
 
         audio.src = lastSong;
